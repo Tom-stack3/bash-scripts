@@ -1,4 +1,4 @@
-# mount D drive on boot
+# Mount my drive on boot
 ```
 UUID=01D6E903EBEC3D70 /media/D    auto nodev,x-gvfs-show,remove_hiberfile 0 0
 ```
