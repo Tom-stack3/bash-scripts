@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# launch Ghidra
+~/Apps/ghidra/ghidraRun
