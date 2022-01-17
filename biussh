@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# import username from secrets.sh
+source "secrets.sh"
+
+# ssh into the server
+ssh -J $biu_username@vpn.esc.biu.ac.il:2222 $biu_username@planet.cs.biu.ac.il
