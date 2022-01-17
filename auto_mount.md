@@ -2,7 +2,7 @@
 ```
 UUID=01D6E903EBEC3D70 /media/D    auto nodev,x-gvfs-show,remove_hiberfile 0 0
 ```
-### steps to automount:
+### Mount the drive when booting:
 ```shell
 sudo vim /etc/fstab
 # at the bottom of the file, add the entry above
