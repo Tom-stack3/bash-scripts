@@ -7,3 +7,5 @@ alias nap='systemctl suspend'
 # launch apktool
 alias apktool='java -jar ~/Apps/apktool/apktool.jar'
 
+# lanuch pwninit with a custom template
+alias pwninit='~/Apps/pwninit/pwninit --template-path ~/.config/pwninit-template.py'
