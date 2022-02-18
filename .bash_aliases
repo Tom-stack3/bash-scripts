@@ -12,3 +12,6 @@ alias pwninit='~/Apps/pwninit/pwninit --template-path ~/.config/pwninit-template
 
 # get sorted disk usage for current working directory
 alias gdu='du -shl * | sort -h'
+
+# start firefox
+alias ffp='firefox -private-window &'
