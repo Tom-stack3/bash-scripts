@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# add current working directory to the .bashrc file
-printf "\n# added $PWD\nexport PATH=\"$PWD:\$PATH\"\n" >> ~/.bashrc
