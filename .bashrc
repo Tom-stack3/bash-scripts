@@ -122,6 +122,7 @@ export PATH="$HOME/dev/pwn.kr/COMMANDS:$PATH"
 export PATH="$HOME/Scripts:$PATH"
 export PATH="$HOME/Scripts/secrets:$PATH"
 
-# ===== Custom Functions =====
-libc() { ldd $1 | grep libc.so | cut -d' ' -f3; }
-shepy() { sed -i '1i#!/usr/bin/env python3' $1; chmod +x $1; }
+# ===== Source Custom Functions =====
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
