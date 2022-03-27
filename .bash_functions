@@ -5,3 +5,12 @@ shepy() { sed -i '1i#!/usr/bin/env python3' $1; chmod +x $1; }
 add-to-bashrc() {
     printf "\n# added $PWD\nexport PATH=\"$PWD:\$PATH\"\n" >> ~/.bashrc
 }
+
+# inspired by: https://www.youtube.com/watch?v=1bWtXEOCpLM
+tmpclip() { # save clipboard to a temporary file
+    mkdir -p "$HOME/.cache/xsel/" && echo "$(xsel -b)" >> "$HOME/.cache/xsel/clipboard.txt"
+}
+
+gtmpclip() { # get temporary clipboard history
+    echo -n $(cat "$HOME/.cache/xsel/clipboard.txt" | fzf --tac) | xsel --clipboard
+}
