@@ -14,3 +14,7 @@ tmpclip() { # save clipboard to a temporary file
 gtmpclip() { # get temporary clipboard history
     echo -n $(cat "$HOME/.cache/xsel/clipboard.txt" | fzf --tac) | xsel --clipboard
 }
+
+upcpy() { # upload file to 0x0.st and copy link to clipboard
+    curl -sF "file=@$1" 0x0.st | xsel --clipboard 
+}
