@@ -15,3 +15,10 @@ alias gdu='du -shl * | sort -h'
 
 # start firefox
 alias ffp='firefox -private-window &'
+
+# delete branches no longer on remote
+# from: https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote
+alias gitlodel='git fetch -p && for branch in $(git for-each-ref --format '\''%(refname) %(upstream:track)'\'' refs/heads | awk '\''$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'\''); do git branch -D $branch; done'
+
+# remove tracking branches no longer on remote
+alias gitredel='git remote prune origin'
