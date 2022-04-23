@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Connect to my bluetooth earphones
+
+right="8C:85:80:56:EC:97"
+left="8C:85:80:57:34:08"
+
+# If the -l flag is set, use the left earphone
+if [ "$1" = "-l" ] || [ "$2" = "-l" ]; then
+    echo "Using left earphone"
+    mac=$left
+else
+    echo "Using right earphone"
+    mac=$right
+fi
+
+# If the -d flag is set as the first or second argument,
+# disconnect the headset
+if [ "$1" = "-d" ] || [ "$2" = "-d" ]; then
+    bt-device -d $mac && echo "Disconnected headset $mac"
+# If the -r flag is set as the first or second argument,
+# remove the headset
+elif [ "$1" = "-r" ] || [ "$2" = "-r" ]; then
+    bt-device -r $mac && echo "Removed headset $mac"
+# Otherwise, connect to the headset
+else
+    bt-device -c $mac && echo "Connected headset $mac"
+fi
+
