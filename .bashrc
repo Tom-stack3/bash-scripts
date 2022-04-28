@@ -126,3 +126,6 @@ export PATH="$HOME/Scripts/secrets:$PATH"
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
+
+# ===== Default Programs =====
+export EDITOR="vim"
