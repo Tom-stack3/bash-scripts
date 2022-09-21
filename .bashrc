@@ -15,6 +15,11 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+# Alias definitions
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
 	for rc in ~/.bashrc.d/*; do
@@ -25,3 +30,11 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 unset rc
+
+# Extra Paths
+export PATH="$HOME/.config/scripts:$PATH"
+
+# Source Custom Functions
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
