@@ -22,3 +22,8 @@ alias gitlodel='git fetch -p && for branch in $(git for-each-ref --format '\''%(
 
 # remove tracking branches no longer on remote
 alias gitredel='git remote prune origin'
+
+# nvim
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
