@@ -35,4 +35,4 @@ alias py2="python2"
 alias p2="python2"
 
 # Search for a directory and cd into it
-alias sd="cd $(find ~ -type d | fzf)"
+alias sd='cd $(find ~ -type d | fzf)'
