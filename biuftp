@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# import username from secrets.sh and open a sftp connection
-source "secrets.sh" && sftp -J $biu_username@vpn.esc.biu.ac.il:2222 $biu_username@planet.cs.biu.ac.il
