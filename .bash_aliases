@@ -18,3 +18,11 @@ alias gitredel='git remote prune origin'
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
+
+# Python
+alias p="python3"
+alias py="python3"
+alias py2="python2"
+
+# Search for a directory and cd into it
+alias sd='cd $(find ~ -type d | fzf)'

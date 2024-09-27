@@ -33,3 +33,7 @@ export PATH="$HOME/.config/scripts:$PATH"
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
+
+# ===== Default Programs =====
+export EDITOR="vim"
+export PAGER="less"
